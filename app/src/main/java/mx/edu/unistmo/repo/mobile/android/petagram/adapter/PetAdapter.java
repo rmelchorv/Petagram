@@ -41,7 +41,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
                 holder.itemView.getContext().getResources().getIdentifier(pet.getAvatar(),
                         "drawable", holder.itemView.getContext().getPackageName()));
         holder.tvBones.setText(String.valueOf(pet.getBones()));
-        holder.tvBreed.setText(" | " + pet.getBreed());
+        holder.tvBreed.setText(String.format(" | %s", pet.getBreed()));
         holder.tvName.setText(pet.getName());
     }
 

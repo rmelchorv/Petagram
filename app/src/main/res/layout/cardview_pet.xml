@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardUseCompatPadding="true">
@@ -17,10 +18,10 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_pet_beagle"
             android:contentDescription="@string/title_avatar" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
@@ -37,18 +38,37 @@
                 android:text=" | ?"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/tvBones"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:textAlignment="textEnd"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ibBoneLess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="BoneLess"
+                    android:minHeight="48dp"
+                    android:src="@drawable/ic_pet_bone_empty"
+                    tools:ignore="ImageContrastCheck" />
+                <ImageButton
+                    android:id="@+id/ibBonePlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="BonePlus"
+                    android:minHeight="48dp"
+                    android:src="@drawable/ic_pet_bone_full"
+                    tools:ignore="ImageContrastCheck" />
+                <TextView
+                    android:id="@+id/tvBones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingStart="5dp"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

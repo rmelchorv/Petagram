@@ -4,8 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,6 +39,8 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
     public void onBindViewHolder(@NonNull PetViewHolder holder, int position) {
         PetModel pet = pets.get(position);
 
+        holder.ibBoneLess.setOnClickListener(view -> Toast.makeText(holder.itemView.getContext(), "Less", Toast.LENGTH_SHORT).show());
+        holder.ibBonePlus.setOnClickListener(view -> Toast.makeText(holder.itemView.getContext(), "Plus", Toast.LENGTH_SHORT).show());
         holder.ivAvatar.setImageResource(
                 holder.itemView.getContext().getResources().getIdentifier(pet.getAvatar(),
                         "drawable", holder.itemView.getContext().getPackageName()));
@@ -52,9 +56,9 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
 
     static class PetViewHolder extends RecyclerView.ViewHolder {
 
+        private final ImageButton ibBoneLess;
+        private final ImageButton ibBonePlus;
         private final ImageView ivAvatar;
-        //private final ImageView ivBoneLess;
-        //private final ImageView ivBonePlus;
         private final TextView tvBones;
         private final TextView tvBreed;
         private final TextView tvName;
@@ -62,9 +66,9 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
         public PetViewHolder(View itemView) {
             super(itemView);
 
+            ibBoneLess = itemView.findViewById(R.id.ibBoneLess);
+            ibBonePlus = itemView.findViewById(R.id.ibBonePlus);
             ivAvatar = itemView.findViewById(R.id.ivAvatar);
-            //ivBoneLess = itemView.findViewById(R.id.ivAvatar);
-            //ivBonePlus = itemView.findViewById(R.id.ivAvatar);
             tvBones = itemView.findViewById(R.id.tvBones);
             tvBreed = itemView.findViewById(R.id.tvBreed);
             tvName = itemView.findViewById(R.id.tvName);

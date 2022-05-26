@@ -46,7 +46,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
                         "drawable", holder.itemView.getContext().getPackageName()));
         holder.tvBones.setText(String.valueOf(pet.getBones()));
         holder.tvBreed.setText(String.format(" | %s", pet.getBreed()));
-        holder.tvName.setText(pet.getName());
+        holder.tvNickname.setText(pet.getNickname());
     }
 
     @Override
@@ -61,7 +61,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
         private final ImageView ivAvatar;
         private final TextView tvBones;
         private final TextView tvBreed;
-        private final TextView tvName;
+        private final TextView tvNickname;
 
         public PetViewHolder(View itemView) {
             super(itemView);
@@ -71,7 +71,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
             ivAvatar = itemView.findViewById(R.id.ivAvatar);
             tvBones = itemView.findViewById(R.id.tvBones);
             tvBreed = itemView.findViewById(R.id.tvBreed);
-            tvName = itemView.findViewById(R.id.tvName);
+            tvNickname = itemView.findViewById(R.id.tvNickname);
         }
     }
 }

@@ -8,6 +8,10 @@ public class PetModel {
     private long id;
     private String nickname;
 
+    public PetModel() {
+
+    }
+
     public PetModel(long id, String nickname, String breed, String avatar, long bones) {
         this.avatar = avatar;
         this.bones = bones;

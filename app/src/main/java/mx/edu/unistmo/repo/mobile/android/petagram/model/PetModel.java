@@ -5,13 +5,13 @@ public class PetModel {
     private final String avatar;
     private final int bones;
     private final String breed;
-    private final String name;
+    private final String nickname;
 
-    public PetModel(String avatar, int bones, String breed, String name) {
+    public PetModel(String avatar, int bones, String breed, String nickname) {
         this.avatar = avatar;
         this.bones = bones;
         this.breed = breed;
-        this.name = name;
+        this.nickname = nickname;
     }
 
     public String getAvatar() {
@@ -26,7 +26,7 @@ public class PetModel {
         return breed;
     }
 
-    public String getName() {
-        return name;
+    public String getNickname() {
+        return nickname;
     }
 }

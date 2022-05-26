@@ -3,12 +3,12 @@ package mx.edu.unistmo.repo.mobile.android.petagram.model;
 public class PetModel {
 
     private String avatar;
-    private int bones;
+    private long bones;
     private String breed;
-    private int id;
+    private long id;
     private String nickname;
 
-    public PetModel(int id, String nickname, String breed, String avatar, int bones) {
+    public PetModel(long id, String nickname, String breed, String avatar, long bones) {
         this.avatar = avatar;
         this.bones = bones;
         this.breed = breed;
@@ -20,7 +20,7 @@ public class PetModel {
         return avatar;
     }
 
-    public int getBones() {
+    public long getBones() {
         return bones;
     }
 
@@ -28,7 +28,7 @@ public class PetModel {
         return breed;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -40,7 +40,7 @@ public class PetModel {
         this.avatar = avatar;
     }
 
-    public void setBones(int bones) {
+    public void setBones(long bones) {
         this.bones = bones;
     }
 
@@ -48,11 +48,11 @@ public class PetModel {
         this.breed = breed;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public void setNickname() {
+    public void setNickname(String nickname) {
         this.nickname = nickname;
     }
 }

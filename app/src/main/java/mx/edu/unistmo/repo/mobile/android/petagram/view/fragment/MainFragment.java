@@ -30,13 +30,14 @@ public class MainFragment extends Fragment {
 
         /* Setting pet list */
         ArrayList<PetModel> pets = new ArrayList<>();
-        pets.add(new PetModel("@drawable/ic_pet_akita_inu", 0,"Akita Inu","Happy"));
-        pets.add(new PetModel("@drawable/ic_pet_beagle", 0,"Beagle","Lucky"));
-        pets.add(new PetModel("@drawable/ic_pet_bulldog", 0,"Bulldog","Jumper"));
-        pets.add(new PetModel("@drawable/ic_pet_galgo", 0,"Galgo","Eyes"));
-        pets.add(new PetModel("@drawable/ic_pet_labrador", 0,"Labrador","Shorty"));
-        pets.add(new PetModel("@drawable/ic_pet_mastin", 0,"Mastin","Charm"));
-        pets.add(new PetModel("@drawable/ic_pet_pug", 0,"Pug","Foot"));
+
+        pets.add(new PetModel(0, "Happy", "Akita Inu", "@drawable/ic_pet_akita_inu", 0));
+        pets.add(new PetModel(1, "Lucky", "Beagle", "@drawable/ic_pet_beagle", 0));
+        pets.add(new PetModel(2, "Skipper", "Bulldog", "@drawable/ic_pet_bulldog", 0));
+        pets.add(new PetModel(3, "Big Eyes", "Galgo", "@drawable/ic_pet_galgo", 0));
+        pets.add(new PetModel(4, "Footprint", "Labrador", "@drawable/ic_pet_labrador", 0));
+        pets.add(new PetModel(5, "Charmy", "Mastin", "@drawable/ic_pet_mastin", 0));
+        pets.add(new PetModel(6, "Shorty", "Pug", "@drawable/ic_pet_pug", 0));
 
         RecyclerView rvPets = view.findViewById(R.id.rvPetList);
 

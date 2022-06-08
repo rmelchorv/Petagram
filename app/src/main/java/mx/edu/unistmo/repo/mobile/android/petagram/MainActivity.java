@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import mx.edu.unistmo.repo.mobile.android.petagram.view.fragment.MainFragment;
+import mx.edu.unistmo.repo.mobile.android.petagram.view.fragment.MainFragmentView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
-                    .add(R.id.fcMainFragment, MainFragment.class, null)
+                    .add(R.id.fcMainFragment, MainFragmentView.class, null)
                     .commit();
         }
     }
